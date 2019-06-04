@@ -3,13 +3,12 @@
 **Руководитель:** Даша Попова ([почта](mailto:daschapopowa@gmail.com))
 
 **Участники:**
-* Анна Азанова ([почта](mailto:azanovaas98@gmail.com)), 
-* Андрей Зырянов ([почта](mailto:zyryanov.andrew@gmail.com)),
-* Мария Суворова ([почта](mailto:brouhahaha@yandex.ru)), 
-* Евгения Рубанова ([почта](mailto:ejouny.ewg@gmail.com)),
-* Полина Недайхлеб ([почта](mailto:n.19polya@mail.ru)),
-* Дарья Жарикова ([почта](mailto:dariajarikovaa@gmail.com)),
-* Надежда Миляева ([почта](mailto:milyaeva.nadia@gmail.com))
+* Валерия Морозова ([почта](mailto:tito_alba@mail.ru)), 
+* Тимур Жетписов ([почта](mailto:volponebt@gmail.com)),
+* Эдуард Григорьев ([почта](mailto:happypuffin7@gmail.com)), 
+* Наталья Озерчук ([почта](mailto:fishow36@gmail.com)),
+* Анастасия Макунина ([почта](mailto:asetorn@gmail.com)),
+* Галина Рязанская ([почта](mailto:galka1999@gmail.com)) (пока на стажировке)
 
 #### Описание проекта:
 
