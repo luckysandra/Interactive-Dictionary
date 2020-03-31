@@ -1,0 +1,37 @@
+label, input[type="submit"] {
+    width:100px;
+    margin-left: 50px;
+}
+
+textarea {
+    vertical-align:middle;
+    width:500px;
+    height:100px;
+    margin-left: 10px;
+}
+
+input[type="text"] {
+    margin-left: 10px;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid red;
+}
+
+div.container_navbar {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:#28a745;
+    color: !important;
+}
+
+a.navbar-brand, a.nav-link {
+    color:white;
+}
+
+.navbar-toggler-icon {
+    color: white;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)")
+} 

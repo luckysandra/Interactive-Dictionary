@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method='POST'> {% csrf_token %}
+        <!-- {{ form.as_p }} -->
+        <p style="margin-left:50px;">Добавить слово:</p>
+        <p>
+            <label for="id_word">Слово:</label>
+            <input id="id_word" type="text" name="word" maxlength="100" placeholder="word" required/>
+        </p>
+        <p>
+            <label for="id_definition">Определение:</label>
+            <textarea id="id_definition" name="definition" placeholder="definition" required></textarea>
+        </p>
+        <p>
+            <label for="id_examples">Примеры:</label>
+            <textarea id="id_examples" name="examples" placeholder="examples" required></textarea>
+        </p>
+        <p>
+            <label for="id_city">Город:</label>
+            <input id="id_city" type="text" name="city" maxlength="100" placeholder="city" required/>
+        </p>
+        <p style="display:none;">
+            <label for="id_date">Дата:</label>
+            <input id="id_date" type="text" name="date" maxlength="100" placeholder="date" value='{% now "jS F Y H:i" %}'/>
+        </p>
+        <input type='submit' class="btn btn-success" value='Save'/>
+    </form>
+{% endblock %}

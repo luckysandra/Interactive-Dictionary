@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang = 'ru'>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+        body {
+            padding-bottom: 50px;
+            width: 100%;
+        }
+        #disclaimer {
+            position: fixed;
+            bottom: 0;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            letter-spacing: 1.4px;
+            word-spacing: -1.4px;
+            color: black;
+            font-weight: 400;
+            text-decoration: none solid rgb(68, 68, 68);
+            font-style: normal;
+            font-variant: small-caps;
+            text-align: center;
+            padding: 5px 10px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        #x {
+            border-radius: 30px;
+            position: absolute;
+            float: right;
+            background: rgba(255, 255, 255, 0.5);
+            color: red;
+            top: -5px;
+            right: 5px;
+            text-decoration: none;
+            outline: 0;
+        }
+    </style>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'pictures/loupe.png' %}"/>
+
+	<title>Интерактивный словарь</title>
+</head>
+<body>
+	{% include 'navbar.html' %}
+    <br/><br/>
+	{% block content %}
+	{% endblock %}
+	{% block new %}
+	{% endblock %}
+    <div id="disclaimer">
+        <button id="x">X</button>
+        <span>Создатели словаря в порядке пункта 3 статьи 1253.1 Гражданского кодекса Российской Федерации не занимаются предварительной модерацией или цензурой контента пользователей. Пользователи несут ответственность за собственные действия в связи с созданием и размещением контента в соответствии с действующим законодательством Российской Федерации.</span>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        var theButton = document.getElementById('disclaimer');
+
+        theButton.style.display = sessionStorage.getItem('display');
+
+        function hideTheButton() {
+            this.style.display = 'none';
+            sessionStorage.setItem('display', 'none');
+        }
+
+        function addEvent(target, type, handler) {
+            if (target.addEventListener) {
+                target.addEventListener(type, handler, false);
+            } else if (target.attachEvent) {
+                target.attachEvent('on' + type, function() {
+                    return handler.call(target, window.event);
+                });
+            } else {
+                target['on' + type] = handler;
+            }
+        }
+
+        addEvent(theButton, 'click', hideTheButton);
+    </script>
+</body>	
+</html>

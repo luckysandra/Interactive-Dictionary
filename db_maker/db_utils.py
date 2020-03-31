@@ -2,7 +2,6 @@ import sqlite3
 
 NAME = 'i_dict_db'
 
-
 class Database:
     def __init__(self):
         self._connection = sqlite3.connect(NAME)

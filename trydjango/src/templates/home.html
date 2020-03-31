@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="card card-sm" action="output" method="GET">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col">
+                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Введите слово..." name="word">
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-lg btn-success" type="submit">Искать</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br/><br/>
+
+<table class="table table-hover" style="width:80%; margin: 0 auto;">
+    <caption style="caption-side:top;">Недавно добавленные слова</caption>
+    <thead>
+        <tr>
+            <th scope="col" style="width:5%;">Id</th>
+            <th scope="col" style="width:5%;">Слово</th>
+            <th scope="col" style="width:35%;">Определение</th>
+            <th scope="col" style="width:35%;">Примеры</th>
+            <th scope="col" style="width:5%;">Никнейм</th>
+            <th scope="col" style="width:5%;">Город</th>
+            <th scope="col" style="width:10%;">Дата</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for elem in contdict %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ elem.word }}</td>
+            {% autoescape off %}
+            <td>{{ elem.definition }}</td>
+            {% endautoescape %}
+            <td>{{ elem.examples|linebreaks }}</td>
+            <td>{{ elem.updater }}</td>
+            <td>{{ elem.city }}</td>
+            <td>{{ elem.date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

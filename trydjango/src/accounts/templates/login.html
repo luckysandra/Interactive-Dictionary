@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="post" action="/accounts/login/">
+    {% if error_message %}
+          <font color="red">{{ error_message }}</font><br/>
+    {% endif %}
+    <p style="margin-left:50px;">Логин: <input style="margin-left:50px;" name="user_name" type="text" placeholder="user_name"><br/></p>
+    <p style="margin-left:50px;">Пароль: <input style="margin-left:37px;" name="user_password" type="password" placeholder="user_password"></p>
+    <input type='submit' style ="width:100px" class="btn btn-success" value='Войти'/>
+    <!-- this template tag will avoid 'CSRF verification failed. Request aborted' error. -->
+    {% csrf_token %}
+</form>
+<br/>
+<p style="margin-left:50px;">Нет аккаунта? <a href="/accounts/signup">Зарегистрироваться</a></p>
+
+{% endblock %}

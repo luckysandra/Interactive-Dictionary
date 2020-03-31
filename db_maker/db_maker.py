@@ -1,6 +1,5 @@
 from db_utils import Database
 
-
 def make_tables():
     db = Database()
     db.execute("DROP TABLE IF EXISTS word_info;", 0)

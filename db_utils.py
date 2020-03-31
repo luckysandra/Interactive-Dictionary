@@ -2,9 +2,8 @@ import sqlite3
 
 NAME = 'i_dict_db.db'
 
-
 class Database:
-    def __init__(self):
+    def __init__(self, name):
         self._connection = sqlite3.connect(NAME)
 
     def commit(self):

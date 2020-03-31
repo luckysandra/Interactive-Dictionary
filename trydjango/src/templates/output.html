@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="card card-sm" action="../output" method="GET">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col">
+                        <input class="form-control form-control-lg form-control-borderless" type="text" placeholder="Enter a word" name="word"/>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br/><br/>
+
+{% if dict %}
+    <table class="table table-hover" style="width:80%; margin: 0 auto;">
+        <caption style="caption-side:top;">Найденные слова</caption>
+        <thead>
+            <tr>
+                <th scope="col" style="width:5%;">Id</th>
+                <th scope="col" style="width:5%;">Word</th>
+                <th scope="col" style="width:35%;">Definition</th>
+                <th scope="col" style="width:35%;">Examples</th>
+                <th scope="col" style="width:5%;">Nickname</th>
+                <th scope="col" style="width:5%;">City</th>
+                <th scope="col" style="width:10%;">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for elem in dict %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ elem.word }}</td>
+                {% autoescape off %}
+                <td>{{ elem.definition }}</td>
+                {% endautoescape %}
+                <td>{{ elem.examples|linebreaks }}</td>
+                <td>{{ elem.updater }}</td>
+                <td>{{ elem.city }}</td>
+                <td>{{ elem.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <div style="margin-left: 50px;">
+    <p>К сожалению, совпадений нет.<p>
+    <p>Но Вы можете добавить слово <i>{{ word }}</i> по следующей ссылке: <a href="/add">Добавить новое слово</a>.</p>
+    </div>
+{% endif %}
+
+{% endblock %}

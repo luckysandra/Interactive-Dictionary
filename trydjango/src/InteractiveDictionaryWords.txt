@@ -1,0 +1,51 @@
+'dacha': 'a country house used as a place for weekends and vacations'
+'otkat ':'a bribe',
+'boyarin':'a Russian noble from the times before Petr I'
+'poshlost':'triviality, vulgarity, sexual promiscuity and soullessness'
+'nadryv':'imaginary, excessively exaggerated and distorted feelings'
+'khamstvo':'rudeness, arrogance and insolence multiplied by impunity'
+'stushevatsya':'become confused in an awkward or unexpected situation'
+'toska':'a feeling of spiritual suffering without any particular reason'
+'bytie':'the existence of an objective reality that is independent of human consciousness'
+'bespredel':'the behavior of a person who violates not only the law, but also moral and social norms'
+'avos':'doing something without planning, without putting in much effort'
+'yurodivy':'a person who voluntarily renounced earthly pleasures in the name of Christ leading wandering lifestyle'
+'podvig':'a brave and heroic act, an action performed in difficult circumstances'
+'soviest':'deep personal interpretation of good and evil and the feeling of responsibility'
+'pogrom':'anact of organised cruelty or killing that is done to a large group of people'
+'brodyaga':'a person who has no home and wanders constantly'
+'smekalka':'the skill to solve problems quickly and simply in imaginative ways'
+'khalyava':'something obtained by pure luck, without any effort'
+'kaif':'a word to say that everything is perfectly good, that it feels good, and that the experience of that situation is just amazing'
+'volya':'both "freedom" and "will", but also a vast natural landscape'
+'pochemuchka':'a person, usually a child, who asks many questions'
+'фигушки':'Adjective used to express rejection'
+'рулить':'Verb used to positively describe a band'
+'лайковать':'Verb used on Facebook to mean "To Like"'
+'холивар':'Noun to describe a large online argument'
+'хайпить':'Verb to describe how much "Hype" something deserves'
+'зашквар':'Noun similar to "Lame"'
+'морозиться':'Verb used to describe "Ghosting" someone'
+'тупить':'Verb used to describe zoning out'
+'лохануться':'Verb to describe a situation you messed up'
+'понт':'Noun meaning arrogance or boasting'
+"баян": "an old joke that everyone knows and that is not funny anymore"
+"кипяток": "boiling-hot water"
+"тунеядец": "a person that deliberately refuses to work and lives as a social parasite"
+"клюква": "a heavily-stereotyped foreign film about Russia"
+"чувяки": "soft leather shoes without hills; slippers"
+"пипетка": "dropper"
+"буран": "severe snowstorm, blizzard"
+"пампушка": "a small yeast dough bun"
+"пипидастр": "a small broom for removing dust from stationary objects"
+"помпон": "a small soft ball, usually made of threads, that is used as a decoration on clothing, especially hats"
+"тюбетейка": "a flat or pointy embroidered round hat without a brim"
+"увалень": "a lazy, clumsy and often fat person"
+"топчан": "a wooden bed without borders or headboard"
+"питекантроп": "Java man"
+"мормышка": "a spoon-shaped fish bait, often leaden"
+"чучело": "a scarecrow; a stuffed animal; a dummy (also slang)"
+"ударник": "an extremely highly productive worker"
+"коновал": "a quack (doctor)"
+"окоп": "a trench"
+"папаха": "a tall fur hat worn by men, a piece of military uniform"
