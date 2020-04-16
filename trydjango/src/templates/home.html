@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
@@ -24,12 +25,13 @@
     <thead>
         <tr>
             <th scope="col" style="width:5%;">Id</th>
-            <th scope="col" style="width:5%;">Слово</th>
-            <th scope="col" style="width:35%;">Определение</th>
-            <th scope="col" style="width:35%;">Примеры</th>
+            <th scope="col" style="width:10%;">Слово</th>
+            <th scope="col" style="width:30%;">Определение</th>
+            <th scope="col" style="width:30%;">Примеры</th>
             <th scope="col" style="width:5%;">Никнейм</th>
             <th scope="col" style="width:5%;">Город</th>
             <th scope="col" style="width:10%;">Дата</th>
+			<th scope="col" style="width:5%;">Оценка</th>
         </tr>
     </thead>
     <tbody>
@@ -44,9 +46,17 @@
             <td>{{ elem.updater }}</td>
             <td>{{ elem.city }}</td>
             <td>{{ elem.date }}</td>
+			<td>
+			<button id="likes" data-catid="{{elem.word}}" class="btn btn-mini btn-primary" type="button">
+			Нравится
+			<b id="like_count"><span id='id-likes'>{{ elem.likes }}</span></b>
+			</button>
+			<button id="dislikes" data-catid="{{elem.word}}" class="btn btn-mini btn-primary" type="button">
+			Не нравится
+			<b id="dislike_count"><span id='id-dislikes'>{{ elem.dislikes }}</span></b>
+			</button></td>
+		{% endfor %}
         </tr>
-        {% endfor %}
     </tbody>
 </table>
-
 {% endblock %}

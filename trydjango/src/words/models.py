@@ -1,8 +1,7 @@
-from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
-from likes.models import Like
-from likes.models import Dislike
+from django.template.defaultfilters import slugify
 import datetime
+
 
 # Create your models here.
 class Word(models.Model):
@@ -12,12 +11,5 @@ class Word(models.Model):
     updater     = models.CharField(max_length=100, default="anonym")
     city        = models.CharField(max_length=100, default="Moscow")
     date        = models.CharField(max_length=100, default=datetime.datetime.today().strftime("%Y-%m-%d-%H.%M.%S"))
-    likes = GenericRelation(Like)
-    dislikes = GenericRelation(Dislike)
-    @property
-    def total_likes(self):
-        return self.likes.count()
-
-    @property
-    def total_dislikes(self):
-        return self.dislikes.count()
+    likes = models.IntegerField(default=0)
+    dislikes = models.IntegerField(default=0)

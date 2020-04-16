@@ -24,3 +24,31 @@ def add_word_view(request, *args, **kwargs):
     'username' : username
     }
     return render(request, 'add.html', context)
+
+
+def like_category(request):
+    cat_id = None
+    if request.method == 'GET':
+        cat_id = request.GET['word']
+    likes = 0
+    if cat_id:
+        cat = Category.objects.get(id=int(cat_id))
+        if cat:
+            likes = cat.likes + 1
+            cat.likes = likes
+            cat.save()
+    return HttpResponse(likes)
+
+
+def dislike_category(request):
+    cat_id = None
+    if request.method == 'GET':
+        cat_id = request.GET['word']
+    dislikes = 0
+    if cat_id:
+        cat = Category.objects.get(id=int(cat_id))
+        if cat:
+            dislikes = cat.dislikes + 1
+            cat.dislikes = dislikes
+            cat.save()
+    return HttpResponse(dislikes)

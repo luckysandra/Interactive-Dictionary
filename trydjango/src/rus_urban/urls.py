@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from words.views import add_word_view
+from words.views import add_word_view, like_category, dislike_category
 from pages import views
 from django.urls import path, include
 urlpatterns = [
@@ -25,5 +25,8 @@ urlpatterns = [
     path('add/', add_word_view),
     path('output/', views.output, name='output'),
     path('about/', views.about_view, name = 'about'),
-    path('accounts/', include('accounts.urls'))
+    path('accounts/', include('accounts.urls')),
+    path('like_category/', like_category, name='like_category'),
+	path('dislike_category/', dislike_category, name='dislike_category')
 ]
+
