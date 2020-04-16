@@ -32,7 +32,7 @@ def like_category(request):
         cat_id = request.GET['word']
     likes = 0
     if cat_id:
-        cat = Category.objects.get(id=int(cat_id))
+        cat = Word.objects.get(id=int(cat_id))
         if cat:
             likes = cat.likes + 1
             cat.likes = likes
@@ -46,7 +46,7 @@ def dislike_category(request):
         cat_id = request.GET['word']
     dislikes = 0
     if cat_id:
-        cat = Category.objects.get(id=int(cat_id))
+        cat = Word.objects.get(id=int(cat_id))
         if cat:
             dislikes = cat.dislikes + 1
             cat.dislikes = dislikes
