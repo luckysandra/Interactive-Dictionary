@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Word
 from .forms import NewWord
+from django.http import HttpResponse
 
 
 def add_word_view(request, *args, **kwargs):

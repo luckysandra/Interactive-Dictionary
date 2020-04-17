@@ -1,17 +1,17 @@
-$('#likes').click(function(){
-	var catid;
-	catid = $(this).attr("data-catid");
-	$.get('like_category/', {category_id: catid}, function(data){
-			$('#like_count').html(data);
-			$('#likes').hide();
+$(document).ready(function(){
+	$('.like').click(function(){
+		var wid = $(this).attr("word-id");
+		jQuery.get('like_category/', {word:wid}, function(data){
+			$('#likes_' + wid).html(data);
+		});
+		$(this).hide();
 	});
-});
 
-$('#dislikes').click(function(){
-	var catid;
-	catid = $(this).attr("data-catid");
-	$.get('dislike_category/', {category_id: catid}, function(data){
-			$('#dislike_count').html(data);
-			$('#dislikes').hide();
+	$('.dislike').click(function(){
+		var wid = $(this).attr("word-id");
+		jQuery.get('dislike_category/', {word:wid}, function(data){
+				$('#dislikes_' + wid).html(data);
+		})
+		$(this).hide();
 	});
 });

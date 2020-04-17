@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
@@ -25,13 +26,13 @@
     <thead>
         <tr>
             <th scope="col" style="width:5%;">Id</th>
-            <th scope="col" style="width:10%;">Слово</th>
+            <th scope="col" style="width:5%;">Слово</th>
             <th scope="col" style="width:30%;">Определение</th>
             <th scope="col" style="width:30%;">Примеры</th>
             <th scope="col" style="width:5%;">Никнейм</th>
             <th scope="col" style="width:5%;">Город</th>
             <th scope="col" style="width:10%;">Дата</th>
-			<th scope="col" style="width:5%;">Оценка</th>
+			<th scope="col" style="width:10%;">Определение хорошее?</th>
         </tr>
     </thead>
     <tbody>
@@ -47,12 +48,12 @@
             <td>{{ elem.city }}</td>
             <td>{{ elem.date }}</td>
 			<td>
-			<button id="likes" data-catid="{{elem.word}}" class="btn btn-primary" type="button">
-			Нравится</button>
-			<b id="dislike_count"><span id='id-likes'>{{ elem.likes }}</span></b>
-			<button id="dislikes" data-catid="{{elem.word}}" class="btn btn-primary" type="button">
-			Не нравится</button>
-			<b id="dislike_count"><span id='id-dislikes'>{{ elem.dislikes }}</span></b>
+				<div class="container">Да: <b id="likes_{{elem.id}}">{{ elem.likes }}</b>
+				<br>
+				<button word-id="{{elem.id}}" class="btn btn-primary like" type="button">+</button></div>
+				<div class="container">Нет: <b id="dislikes_{{elem.id}}">{{ elem.dislikes }}</b>
+				<br>
+				<button word-id="{{elem.id}}" class="btn btn-primary dislike" type="button">-</button></div>
 			</td>
 		{% endfor %}
         </tr>
